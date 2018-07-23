@@ -1,0 +1,32 @@
+<style>
+  .lib-item {
+    margin: 10px 0;
+  }
+
+  .lib-item-title {
+    font-weight: bold;
+  }
+
+  .lib-item-subtitle {
+    font-style: italic;
+  }
+</style>
+
+<div class="library">
+  <h3>Michael's Library</h3>
+
+  {{#each books as |book|}}
+    <div class="lib-item">
+      <div class="lib-item-title">
+        {{book.title}}
+      </div>
+      <div class="lib-item-subtitle">
+        {{book.subtitle}}
+      </div>
+      <div class="lib-item-author">
+        {{book.author}}
+      </div>
+    </div>
+  {{/each}}
+
+</div>

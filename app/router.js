@@ -7,6 +7,8 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('current');
+  this.route('library');
 });
 
 export default Router;
