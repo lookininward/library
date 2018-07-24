@@ -8,6 +8,11 @@
   }
 }
 
+.lb-item-info {
+  padding: 10px 0;
+  width: 100%;
+}
+
 .lb-item-title {
   font-size: 22px;
   font-weight: bold;
@@ -30,7 +35,6 @@
   width: 150px;
   background-color: lightgrey;
 }
-
 
 // Detailed View --------------------------------------------------------------
 .lb-item.lb-item--expanded {
@@ -55,4 +59,18 @@
 
 .lb-item.lb-item--expanded .lb-item-description {
   margin: 10px 0;
+}
+
+.lb-item.lb-item--expanded .lb-item-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.lb-item.lb-item--expanded .lb-item-form .lb-item-title {
+  width: 100%;
+}
+
+.lb-item-actions {
+  display: flex;
+  justify-content: flex-end;
 }

@@ -1,0 +1,64 @@
+<div class="lb-item lb-item--expanded">
+
+  <div class="lb-item-cover">
+    {{#if item.cover}}
+      <img src="/assets/{{item.cover}}">
+    {{else}}
+      <div class="lb-item-cover-empty"></div>
+    {{/if}}
+  </div>
+
+  <div class="lb-item-info">
+
+    {{#if isEditing}}
+      <form class="lb-item-form">
+        {{input name="title"
+                value=itemData.title
+                class="lb-item-title"}}
+        {{input name="subtitle"
+                value=itemData.subtitle
+                class="lb-item-subtitle"}}
+        {{input name="author"
+                value=itemData.author
+                class="lb-item-author"}}
+        {{textarea name="description"
+                   value=itemData.description
+                   class="lb-item-description"
+                   rows=5}}
+      </form>
+    {{else}}
+      <div class="lb-item-title">
+        {{item.title}}
+      </div>
+      <div class="lb-item-subtitle">
+        {{item.subtitle}}
+      </div>
+      <div class="lb-item-author">
+        {{item.author}}
+      </div>
+      <div class="lb-item-description">
+        {{item.description}}
+      </div>
+
+    {{/if}}
+  </div>
+
+</div>
+
+<div class="lb-item-actions">
+
+  {{#if isEditing}}
+    <button {{action 'saveChanges' form}}>
+      Save Changes
+    </button>
+  {{else}}
+    <button {{action 'readItem'}}>
+      Read
+    </button>
+  {{/if}}
+
+  <button {{action 'toggleEdit'}}>
+    {{if isEditing 'Cancel' 'Edit'}}
+  </button>
+
+</div>
