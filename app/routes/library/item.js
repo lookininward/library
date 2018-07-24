@@ -1,13 +1,11 @@
 import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 
 export default Route.extend({
+  store: service(),
 
-  model(params) {
-    // Set library controller viewingItem to true
+  model(item) {
     this.controllerFor('library').set('viewingItem', true);
-
-    // Get item model id
-    // Query store
-    // return item
+    return this.get('store').peekRecord('item', item.item_id);
   }
 });
