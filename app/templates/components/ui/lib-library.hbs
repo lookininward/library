@@ -1,5 +1,6 @@
 <style>
   .lib-item {
+    display: flex;
     margin: 10px 0;
   }
 
@@ -10,6 +11,20 @@
   .lib-item-subtitle {
     font-style: italic;
   }
+
+  .lib-item-thumb {
+    margin-right: 10px;
+  }
+
+  .lib-item-thumb img {
+    max-width: 150px;
+  }
+
+  .lib-item-thumb-empty {
+    height: 225px;
+    width: 150px;
+    background-color: lightgrey;
+  }
 </style>
 
 <div class="library">
@@ -17,15 +32,27 @@
 
   {{#each books as |book|}}
     <div class="lib-item">
-      <div class="lib-item-title">
-        {{book.title}}
+
+      <div class="lib-item-thumb">
+        {{#if book.cover}}
+          <img src="assets/{{book.cover}}">
+        {{else}}
+          <div class="lib-item-thumb-empty"></div>
+        {{/if}}
       </div>
-      <div class="lib-item-subtitle">
-        {{book.subtitle}}
+
+      <div class="">
+        <div class="lib-item-title">
+          {{book.title}}
+        </div>
+        <div class="lib-item-subtitle">
+          {{book.subtitle}}
+        </div>
+        <div class="lib-item-author">
+          {{book.author}}
+        </div>
       </div>
-      <div class="lib-item-author">
-        {{book.author}}
-      </div>
+
     </div>
   {{/each}}
 
