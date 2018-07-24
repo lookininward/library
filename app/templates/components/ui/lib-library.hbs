@@ -4,7 +4,12 @@
     margin: 10px 0;
   }
 
+  .lib-item:hover {
+    background-color: #f2f2f2;
+  }
+
   .lib-item-title {
+    font-size: 22px;
     font-weight: bold;
   }
 
@@ -30,20 +35,27 @@
 <div class="library">
   <h3>Michael's Library</h3>
 
+
+  <button {{action 'toggleThumbnails'}}>Show Thumbnails</button>
+
   {{#each books as |book|}}
     <div class="lib-item">
 
-      <div class="lib-item-thumb">
-        {{#if book.cover}}
-          <img src="assets/{{book.cover}}">
-        {{else}}
-          <div class="lib-item-thumb-empty"></div>
-        {{/if}}
-      </div>
+      {{#if settings.showThumbs}}
+        <div class="lib-item-thumb">
+          {{#if book.cover}}
+            <img src="assets/{{book.cover}}">
+          {{else}}
+            <div class="lib-item-thumb-empty"></div>
+          {{/if}}
+        </div>
+      {{/if}}
 
       <div class="">
         <div class="lib-item-title">
-          {{book.title}}
+          {{#link-to 'library.item' book.id}}
+            {{book.title}}
+          {{/link-to}}
         </div>
         <div class="lib-item-subtitle">
           {{book.subtitle}}

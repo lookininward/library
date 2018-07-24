@@ -1,3 +1,7 @@
-{{ui/lib-library
-  books=model
-}}
+{{#unless viewingItem}}
+  {{ui/lib-library
+    books=model
+  }}
+{{/unless}}
+
+{{outlet}}
