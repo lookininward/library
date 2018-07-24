@@ -1,0 +1,58 @@
+// List View ------------------------------------------------------------------
+.lb-item {
+  display: flex;
+  margin: 10px 0;
+
+  &:hover {
+    background-color: #f2f2f2;
+  }
+}
+
+.lb-item-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.lb-item-subtitle {
+  font-style: italic;
+}
+
+.lb-item-thumb {
+  margin-right: 10px;
+}
+
+.lb-item-thumb img {
+  max-width: 150px;
+}
+
+.lb-item-thumb--empty {
+  height: 225px;
+  width: 150px;
+  background-color: lightgrey;
+}
+
+
+// Detailed View --------------------------------------------------------------
+.lb-item.lb-item--expanded {
+  display: flex;
+  margin: 30px 0 10px 0;
+  background-color: #f2f2f2;
+}
+
+.lb-item.lb-item--expanded .lb-item-info {
+  padding: 20px;
+}
+
+.lb-item.lb-item--expanded .lb-item-cover img {
+  max-width: 450px;
+}
+
+.lb-item.lb-item--expanded .lb-item-cover-empty {
+  height: 675px;
+  width: 450px;
+  background-color: lightgrey;
+}
+
+.lb-item.lb-item--expanded .lb-item-description {
+  margin: 10px 0;
+}

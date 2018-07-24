@@ -1,62 +1,24 @@
-<style>
-  .lib-item {
-    display: flex;
-    margin: 30px 0 10px 0;
-  }
+<div class="lb-item lb-item--expanded">
 
-  .lib-item-info {
-    padding: 20px;
-  }
-
-  .lib-item-title {
-    font-size: 22px;
-    font-weight: bold;
-  }
-
-  .lib-item-subtitle {
-    font-style: italic;
-  }
-
-  .lib-item-cover {
-    margin-right: 10px;
-  }
-
-  .lib-item-cover img {
-    max-width: 450px;
-  }
-
-  .lib-item-cover-empty {
-    height: 675px;
-    width: 450px;
-    background-color: lightgrey;
-  }
-
-  .lib-item-description {
-    margin: 10px 0;
-  }
-</style>
-
-<div class="lib-item">
-
-  <div class="lib-item-cover">
+  <div class="lb-item-cover">
     {{#if item.cover}}
       <img src="/assets/{{item.cover}}">
     {{else}}
-      <div class="lib-item-cover-empty"></div>
+      <div class="lb-item-cover-empty"></div>
     {{/if}}
   </div>
 
-  <div class="lib-item-info">
-    <div class="lib-item-title">
+  <div class="lb-item-info">
+    <div class="lb-item-title">
       {{item.title}}
     </div>
-    <div class="lib-item-subtitle">
+    <div class="lb-item-subtitle">
       {{item.subtitle}}
     </div>
-    <div class="lib-item-author">
+    <div class="lb-item-author">
       {{item.author}}
     </div>
-    <div class="lib-item-description">
+    <div class="lb-item-description">
       {{item.description}}
     </div>
   </div>

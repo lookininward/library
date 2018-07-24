@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('library', function() {
     this.route('item', { path: '/:item_id' });
   });
+  this.route('settings');
 });
 
 export default Router;

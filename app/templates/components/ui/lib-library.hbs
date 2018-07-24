@@ -1,71 +1,13 @@
-<style>
-  .lib-item {
-    display: flex;
-    margin: 10px 0;
-  }
-
-  .lib-item:hover {
-    background-color: #f2f2f2;
-  }
-
-  .lib-item-title {
-    font-size: 22px;
-    font-weight: bold;
-  }
-
-  .lib-item-subtitle {
-    font-style: italic;
-  }
-
-  .lib-item-thumb {
-    margin-right: 10px;
-  }
-
-  .lib-item-thumb img {
-    max-width: 150px;
-  }
-
-  .lib-item-thumb-empty {
-    height: 225px;
-    width: 150px;
-    background-color: lightgrey;
-  }
-</style>
-
-<div class="library">
-  <h3>Michael's Library</h3>
-
+<div class="lb">
+  <h3>{{settings.user.name}}'s Library</h3>
 
   <button {{action 'toggleThumbnails'}}>Show Thumbnails</button>
 
-  {{#each books as |book|}}
-    <div class="lib-item">
-
-      {{#if settings.showThumbs}}
-        <div class="lib-item-thumb">
-          {{#if book.cover}}
-            <img src="assets/{{book.cover}}">
-          {{else}}
-            <div class="lib-item-thumb-empty"></div>
-          {{/if}}
-        </div>
-      {{/if}}
-
-      <div class="">
-        <div class="lib-item-title">
-          {{#link-to 'library.item' book.id}}
-            {{book.title}}
-          {{/link-to}}
-        </div>
-        <div class="lib-item-subtitle">
-          {{book.subtitle}}
-        </div>
-        <div class="lib-item-author">
-          {{book.author}}
-        </div>
-      </div>
-
-    </div>
+  {{#each items as |item|}}
+    {{ui/item/lb-item
+      settings=settings
+      item=item
+    }}
   {{/each}}
 
 </div>
