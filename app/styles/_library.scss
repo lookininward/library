@@ -1,7 +1,14 @@
+.lb {
+  overflow-y: auto;
+  height: auto;
+  flex: 1;
+}
+
 // List View ------------------------------------------------------------------
 .lb-item {
   display: flex;
   margin: 10px 0;
+  padding: 10px 20px;
 
   &:hover {
     background-color: #f2f2f2;
@@ -14,8 +21,17 @@
 }
 
 .lb-item-title {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
+}
+
+.lb-item-title a {
+  text-decoration: none;
+
+  &:visited {
+    color: #000;
+    text-decoration: none;
+  }
 }
 
 .lb-item-subtitle {
@@ -48,7 +64,9 @@
 }
 
 .lb-item.lb-item--expanded .lb-item-cover img {
+  width: 100%;
   max-width: 450px;
+  height: auto;
 }
 
 .lb-item.lb-item--expanded .lb-item-cover-empty {
