@@ -1,12 +1,36 @@
 <div class="nav">
-  <div class="nav-item" {{action transitionTo 'library'}}>
-    Home
-  </div>
-  <div class="nav-item" {{action transitionTo 'current'}}>
-    Current
+
+  {{!-- Section Left --}}
+  <div class="nav-section">
+    <div class="nav-item" {{action transitionTo 'library'}}>
+      Home
+    </div>
+    <div class="nav-item" {{action transitionTo 'current'}}>
+      Current
+    </div>
   </div>
 
-  <div class="nav-item" {{action transitionTo 'settings'}}>
-    Settings
+  {{!-- Section Right --}}
+  <div class="nav-section">
+
+    <div class="nav-item nav-item--icon search">
+      <i class="fas fa-search"></i>
+    </div>
+
+    <div class="nav-item nav-item--icon alerts">
+      <i class="far fa-bell"></i>
+      {{!-- <i class="fas fa-bell"></i> --}}
+    </div>
+
+    <div class="nav-item nav-item--icon settings"
+         {{action transitionTo 'settings'}}>
+      <i class="fas fa-cog"></i>
+    </div>
+
+    <div class="nav-item nav-item--icon profile">
+      <div class="avatar">
+      </div>
+    </div>
+
   </div>
 </div>

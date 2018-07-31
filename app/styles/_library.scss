@@ -1,3 +1,4 @@
+
 .lb {
   overflow-y: auto;
   height: auto;
@@ -39,7 +40,7 @@
 }
 
 .lb-item-thumb {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .lb-item-thumb img {
@@ -55,7 +56,9 @@
 // Detailed View --------------------------------------------------------------
 .lb-item.lb-item--expanded {
   display: flex;
+  flex-direction: row;
   margin: 30px 0 10px 0;
+  height: 100%;
   background-color: #f2f2f2;
 }
 
@@ -70,7 +73,7 @@
 }
 
 .lb-item.lb-item--expanded .lb-item-cover-empty {
-  height: 675px;
+  height: 100%;
   width: 450px;
   background-color: lightgrey;
 }
@@ -91,4 +94,5 @@
 .lb-item-actions {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 10px;
 }

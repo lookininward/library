@@ -1,7 +1,5 @@
-import Ember from 'ember';
 import DS from 'ember-data';
-
-const { computed } = Ember;
+import { computed } from '@ember/object';
 
 export default DS.JSONAPIAdapter.extend({
   host: computed(function(){

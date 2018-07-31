@@ -1,0 +1,13 @@
+
+.lb-btn {
+  max-width: 150px;
+  width: 100%;
+  height: 30px;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid #000;
+  }
+}

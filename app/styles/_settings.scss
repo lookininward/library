@@ -1,0 +1,19 @@
+.lb-settings {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.lb-settings-section {
+  margin: 0 0 20px 0;
+}
+
+.lb-settings-section-header {
+  margin: 10px 0;
+}
+
+.lb-input-label {
+  font-size: 12px;
+  cursor: pointer;
+}

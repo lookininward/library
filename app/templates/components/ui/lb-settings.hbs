@@ -1,0 +1,28 @@
+
+<div class="lb-settings">
+
+  <h3>Settings</h3>
+
+  <div class="lb-settings-section">
+
+    <div class="lb-settings-section-header">
+      Library
+    </div>
+
+    {{input
+      type="checkbox"
+      checked=form.showThumbs
+      name="showThumbs"
+      id="showThumbs"
+    }}
+
+    <label for="showThumbs" class="lb-input-label">
+      Show Thumbnails
+    </label>
+
+  </div>
+
+  <button class="lb-btn" {{action 'updateSettings'}}>
+    Update Settings
+  </button>
+</div>

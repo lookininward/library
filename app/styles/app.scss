@@ -9,6 +9,7 @@ body {
 .container {
   position: relative;
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: calc(100vh - 75px);
   overflow: hidden;
@@ -18,3 +19,12 @@ body {
 
 @import './_navigation';
 @import './_library';
+@import './_current';
+@import './_settings';
+
+// UI
+@import './ui/_buttons';
+
+// Utilities
+@import './_utilities';
+

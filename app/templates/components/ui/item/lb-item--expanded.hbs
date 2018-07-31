@@ -48,16 +48,19 @@
 <div class="lb-item-actions">
 
   {{#if isEditing}}
-    <button {{action 'saveChanges' form}}>
+    <button class="lb-btn lb-mr-1"
+            {{action 'saveChanges' form}}>
       Save Changes
     </button>
   {{else}}
-    <button {{action 'readItem'}}>
+    <button class="lb-btn lb-mr-1"
+            {{action 'readItem'}}>
       Read
     </button>
   {{/if}}
 
-  <button {{action 'toggleEdit'}}>
+  <button class="lb-btn lb-mr-1"
+          {{action 'toggleEdit'}}>
     {{if isEditing 'Cancel' 'Edit'}}
   </button>
 
