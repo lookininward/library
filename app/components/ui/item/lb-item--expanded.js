@@ -19,7 +19,7 @@ export default Component.extend({
       this.toggleProperty('isEditing');
     },
 
-    saveChanges(form) {
+    saveChanges() {
       const item = this.get('item');
       const itemData = this.get('itemData');
 
@@ -28,8 +28,8 @@ export default Component.extend({
     },
 
     readItem() {
-      const item = this.get('item');
-      console.log('Reading item...');
+      // const item = this.get('item');
+      // console.log('Reading item...');
       // set as current on library controller
     }
   }

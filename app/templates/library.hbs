@@ -4,4 +4,8 @@
   }}
 {{/unless}}
 
-{{outlet}}
+{{#if isLoading}}
+  {{partial 'partial/lb-loading-screen'}}
+{{else}}
+  {{outlet}}
+{{/if}}

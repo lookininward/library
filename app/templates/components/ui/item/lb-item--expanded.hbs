@@ -1,5 +1,9 @@
 <div class="lb-item lb-item--expanded">
 
+  <div class="lb-item-close" {{action exit}}>
+    <i class="fas fa-times"></i>
+  </div>
+
   <div class="lb-item-cover">
     {{#if item.cover}}
       <img src="/assets/{{item.cover}}">
@@ -14,17 +18,25 @@
       <form class="lb-item-form">
         {{input name="title"
                 value=itemData.title
-                class="lb-item-title"}}
+                placeholder="Title"
+                autocomplete="off"
+                class="lb-item-title lb-item-title--input"}}
         {{input name="subtitle"
                 value=itemData.subtitle
-                class="lb-item-subtitle"}}
+                placeholder="Subtitle"
+                autocomplete="off"
+                class="lb-item-subtitle lb-item-subtitle--input"}}
         {{input name="author"
                 value=itemData.author
-                class="lb-item-author"}}
+                placeholder="Author"
+                autocomplete="off"
+                class="lb-item-author lb-item-author--input"}}
         {{textarea name="description"
                    value=itemData.description
-                   class="lb-item-description"
-                   rows=5}}
+                   placeholder="description"
+                   autocomplete="off"
+                   class="lb-item-description lb-item-description--input"
+                   rows=15}}
       </form>
     {{else}}
       <div class="lb-item-title">

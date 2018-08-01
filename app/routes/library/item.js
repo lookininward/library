@@ -7,5 +7,12 @@ export default Route.extend({
   model(item) {
     this.controllerFor('library').set('viewingItem', true);
     return this.get('store').peekRecord('item', item.item_id);
+  },
+
+  actions: {
+    transitionToLibrary() {
+      this.controllerFor('library').set('viewingItem', false);
+      this.transitionTo('library');
+    }
   }
 });
